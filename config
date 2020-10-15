@@ -154,4 +154,23 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+	position top 
+
 }
+
+# Monitors
+set $Mon1 HDMI1
+set $Mon2 HDMI2
+exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1
+
+#########################################
+#
+
+# layout toggle, keycode 23 is Tab
+bindcode Mod1+23 layout toggle tabbed split
+bindcode $Mod+23 layout toggle splitv splith
+
+
+#flameshot
+# DEPEND
+bindsym Print exec --no-startup-id flameshot gui
